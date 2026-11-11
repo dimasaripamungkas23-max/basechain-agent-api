@@ -6,7 +6,7 @@ const RPC = process.env.BASE_RPC_URL || "https://mainnet.base.org";
 const PAY_TO = "0x0b699db8ded26d3f8a1f1bf2aa90498c5f83c012";
 const FACILITATOR = "https://x402.org/facilitator";
 const USDC = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
-const ORIGIN = process.env.API_PUBLIC_URL || `http://localhost:${PORT}`;
+const ORIGIN = process.env.API_PUBLIC_URL || "https://basechain-agent-api.vercel.app";
 
 app.use(express.json());
 
