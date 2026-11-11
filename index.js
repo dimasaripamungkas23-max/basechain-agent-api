@@ -213,7 +213,11 @@ app.get("/openapi.json", (req, res) => {
   });
 });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`BaseChain Agent API running on port ${PORT}`);
-  console.log(`Payment recipient: ${PAY_TO}`);
-});
+export default app;
+
+if (!process.env.VERCEL) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`BaseChain Agent API running on port ${PORT}`);
+    console.log(`Payment recipient: ${PAY_TO}`);
+  });
+}
